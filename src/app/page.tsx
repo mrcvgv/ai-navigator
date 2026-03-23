@@ -3,11 +3,7 @@ import { ArrowRight, GitCompare, Search, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ToolCard } from "@/components/domain/ToolCard";
 import { CategoryPill } from "@/components/domain/CategoryPill";
-import {
-  getFeaturedTools,
-  getAllCategories,
-  getAllComparisons,
-} from "@/lib/repository";
+import { getFeaturedTools, getAllCategories, getAllComparisons } from "@/lib/repository";
 
 export default async function HomePage() {
   const [featured, categories, comparisons] = await Promise.all([
@@ -19,47 +15,48 @@ export default async function HomePage() {
   return (
     <div className="pb-20">
 
-      {/* ── Hero: Compare-first ── */}
+      {/* Hero */}
       <section className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
         <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
           <Zap className="h-3 w-3" />
-          AIツール比較サイト — 決めるための道具
+          AI tool decisions, simplified
         </div>
         <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-          迷ったら、<span className="text-primary">並べて比べろ。</span>
+          Stop guessing.{" "}
+          <span className="text-primary">Start comparing.</span>
         </h1>
         <p className="mx-auto mb-8 max-w-xl text-lg text-muted-foreground">
-          75種類のAIツールを横断比較。価格・機能・スコアを一覧で確認して、
-          検索ではなく<strong>確信を持って選ぶ</strong>。
+          Compare AI tools side-by-side across pricing, features, and scores.
+          See exactly what differs — then decide with confidence.
         </p>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link href="/compare">
             <Button size="lg" className="gap-2 shadow-md shadow-primary/20">
               <GitCompare className="h-5 w-5" />
-              ツールを比較する
+              Compare AI Tools
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
           <Link href="/explore">
             <Button size="lg" variant="outline" className="gap-2">
               <Search className="h-4 w-4" />
-              全ツールを探す
+              Browse all tools
             </Button>
           </Link>
         </div>
       </section>
 
-      {/* ── Popular Comparisons: FIRST content section ── */}
+      {/* Popular Comparisons — first content section */}
       <section className="border-y border-border bg-muted/30 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold">人気の比較</h2>
-              <p className="text-sm text-muted-foreground mt-1">よく比べられるツールの組み合わせ</p>
+              <h2 className="text-xl font-bold">Popular Comparisons</h2>
+              <p className="text-sm text-muted-foreground mt-1">The most-searched head-to-heads</p>
             </div>
             <Link href="/compare">
               <Button variant="outline" size="sm" className="gap-1.5">
-                全{comparisons.length}件
+                All {comparisons.length} comparisons
                 <ArrowRight className="h-3.5 w-3.5" />
               </Button>
             </Link>
@@ -82,15 +79,15 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── How to use: 3 steps ── */}
+      {/* How it works */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-        <h2 className="mb-8 text-xl font-bold text-center">使い方は3ステップ</h2>
+        <h2 className="mb-8 text-xl font-bold text-center">How it works</h2>
         <div className="grid gap-6 sm:grid-cols-3">
           {[
-            { step: "1", title: "ツールを選ぶ", desc: "Exploreページからカード右下の「Compare」ボタンで最大3つ追加", icon: "🔍" },
-            { step: "2", title: "並べて比較", desc: "価格・機能・スコアを一覧表で比較。強みと弱点が一目でわかる", icon: "⚖️" },
-            { step: "3", title: "確信を持って選ぶ", desc: "「自分のケースに合うのはどれか」が明確になってから試す", icon: "✅" },
-          ].map(({ step, title, desc, icon }) => (
+            { step: "1", icon: "🔍", title: "Pick your tools", desc: 'Hit "Compare" on any tool card to add it to your comparison tray — up to 3 at a time.' },
+            { step: "2", icon: "⚖️", title: "See the diff", desc: "Pricing, features, and scores in one table. Winners highlighted per row." },
+            { step: "3", icon: "✅", title: "Decide with confidence", desc: "Know exactly which tool fits your use case before you sign up." },
+          ].map(({ step, icon, title, desc }) => (
             <div key={step} className="rounded-xl border border-border p-6 text-center">
               <div className="mb-3 text-3xl">{icon}</div>
               <div className="mb-1 text-xs font-medium text-muted-foreground uppercase tracking-wide">Step {step}</div>
@@ -99,28 +96,19 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <Link href="/explore">
-            <Button size="lg" variant="outline" className="gap-2">
-              <Search className="h-4 w-4" />
-              ツールを探して比較を始める
-            </Button>
-          </Link>
-        </div>
       </section>
 
-      {/* ── Featured tools ── */}
+      {/* Featured tools */}
       <section className="border-t border-border bg-muted/20 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-semibold">人気AIツール</h2>
-              <p className="text-sm text-muted-foreground">カードの「Compare」で追加して比較しよう</p>
+              <h2 className="text-xl font-semibold">Top AI Tools</h2>
+              <p className="text-sm text-muted-foreground">Hit "Compare" to add any card to your tray</p>
             </div>
             <Link href="/explore">
               <Button variant="outline" size="sm" className="gap-1.5">
-                全ツールを見る
-                <ArrowRight className="h-3.5 w-3.5" />
+                View all <ArrowRight className="h-3.5 w-3.5" />
               </Button>
             </Link>
           </div>
@@ -132,18 +120,14 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Categories ── */}
+      {/* Categories */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">カテゴリから探す</h2>
-          <Link href="/categories" className="text-sm text-primary hover:underline">
-            すべてのカテゴリ
-          </Link>
+          <h2 className="text-lg font-semibold">Browse by Category</h2>
+          <Link href="/categories" className="text-sm text-primary hover:underline">All categories</Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
-            <CategoryPill key={cat.slug} category={cat} />
-          ))}
+          {categories.map((cat) => <CategoryPill key={cat.slug} category={cat} />)}
         </div>
       </section>
 

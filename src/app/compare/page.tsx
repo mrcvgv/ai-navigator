@@ -6,8 +6,8 @@ import { ComparisonTable } from "@/components/domain/ComparisonTable";
 import { getToolsBySlugs, getAllComparisons } from "@/lib/repository";
 
 export const metadata: Metadata = {
-  title: "AIツールを比較する",
-  description: "AIツールを横断比較。最大3つを選んで価格・機能・スコアを一覧で確認。",
+  title: "Compare AI Tools",
+  description: "Side-by-side comparison of AI tools. Pick up to 3 and see exactly how they differ.",
 };
 
 interface Props {
@@ -25,52 +25,45 @@ export default async function ComparePage({ searchParams }: Props) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 pb-24">
       {selectedTools.length >= 2 ? (
-        /* ── Active comparison ── */
         <div>
           <div className="mb-8">
             <Link href="/compare" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              ← 比較一覧に戻る
+              ← All comparisons
             </Link>
-            <h1 className="text-3xl font-bold">
-              {selectedTools.map((t) => t.name).join(" vs ")}
-            </h1>
+            <h1 className="text-3xl font-bold">{selectedTools.map((t) => t.name).join(" vs ")}</h1>
             <p className="mt-2 text-muted-foreground">
-              {selectedTools.length}つのAIツールを比較中 — 価格・機能・スコア
+              Comparing {selectedTools.length} tools — pricing, features, and scores
             </p>
           </div>
           <ComparisonTable tools={selectedTools} />
         </div>
       ) : (
-        /* ── Landing: compare-first design ── */
         <div>
-          {/* Hero */}
           <div className="mb-10 text-center">
             <GitCompare className="mx-auto mb-4 h-12 w-12 text-primary" />
-            <h1 className="mb-3 text-3xl font-bold">AIツールを比較する</h1>
+            <h1 className="mb-3 text-3xl font-bold">Compare AI Tools</h1>
             <p className="mx-auto max-w-lg text-muted-foreground">
-              最大3つのツールを選んで、価格・機能・スコアを横断比較。
-              どれが自分に合うかを<strong>確信を持って</strong>選ぼう。
+              Pick up to 3 tools, see them side by side — pricing, features, scores, and winners highlighted per row.
             </p>
           </div>
 
-          {/* Quick start: pick tools */}
-          <div className="mb-12 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 sm:p-8">
-            <h2 className="mb-2 font-semibold text-lg">今すぐ比較を始める</h2>
+          {/* Quick start */}
+          <div className="mb-12 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 sm:p-8 text-center">
+            <h2 className="mb-2 font-semibold text-lg">Start comparing</h2>
             <p className="mb-5 text-sm text-muted-foreground">
-              Exploreページでツールカードの「Compare」を押すと、ここに並んで比較できます。
+              Go to Explore, hit <strong>"Compare"</strong> on any tool card, then come back here.
             </p>
             <Link href="/explore">
               <Button className="gap-2">
                 <Search className="h-4 w-4" />
-                ツールを探して追加する
+                Pick tools to compare
               </Button>
             </Link>
           </div>
 
-          {/* Popular comparisons */}
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-bold text-xl">人気の比較</h2>
-            <span className="text-sm text-muted-foreground">{allComparisons.length}件</span>
+            <h2 className="font-bold text-xl">Popular Comparisons</h2>
+            <span className="text-sm text-muted-foreground">{allComparisons.length} total</span>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {allComparisons.map((comp) => (
@@ -85,7 +78,7 @@ export default async function ComparePage({ searchParams }: Props) {
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{comp.summary}</p>
                 <div className="flex items-center gap-1 text-xs font-medium text-primary">
-                  比較を見る <ArrowRight className="h-3 w-3" />
+                  See comparison <ArrowRight className="h-3 w-3" />
                 </div>
               </Link>
             ))}

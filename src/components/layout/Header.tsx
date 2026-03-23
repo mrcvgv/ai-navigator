@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import { useCompare } from "@/lib/compare-store";
 
 const nav = [
-  { label: "比較する", href: "/compare", highlight: true },
-  { label: "探す", href: "/explore" },
-  { label: "カテゴリ", href: "/categories" },
+  { label: "Compare", href: "/compare", highlight: true },
+  { label: "Explore",    href: "/explore"    },
+  { label: "Categories", href: "/categories" },
 ];
 
 export function Header() {
@@ -30,11 +30,11 @@ export function Header() {
               key={href}
               href={href}
               className={cn(
-                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm transition-colors font-medium",
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
                 pathname.startsWith(href)
                   ? "bg-primary text-primary-foreground"
                   : highlight
-                    ? "text-primary border border-primary/40 hover:bg-primary hover:text-primary-foreground"
+                    ? "border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
               )}
             >
