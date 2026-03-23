@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { CompareBar } from "@/components/domain/CompareBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
           <p>AI Navigator &copy; {new Date().getFullYear()} - Helping you decide, not just search.</p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
