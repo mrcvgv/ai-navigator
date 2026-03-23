@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Navigator
 
-## Getting Started
+**AI tool decision-making platform** — not just a directory, but a tool to help people choose the right AI for their needs.
 
-First, run the development server:
+## What this is
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+AI Navigator helps users go from "I don't know which AI to use" to "I'm trying this one." It does this through:
+
+- **Side-by-side comparison** with honest, structured scores
+- **Category-based exploration** with filtering by pricing, API, Japanese support, etc.
+- **Decision-oriented tool pages** (best for / not ideal for / scores)
+- **Affiliate-ready CTA structure** built in from the start
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16+ (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Components | shadcn/ui + Lucide icons |
+| State | Zustand (compare bar) |
+| Data | Local mock data (Supabase-ready) |
+| Deploy | Vercel |
+
+## Directory structure
+
+```
+src/
+  app/
+    page.tsx                     # Home
+    explore/page.tsx             # Server component (SSR)
+    explore/ExploreClient.tsx    # Filter/search client logic
+    tools/[slug]/page.tsx        # Tool detail (SSG)
+    compare/page.tsx             # Dynamic compare (client)
+    compare/[slug]/page.tsx      # Pre-defined comparison (SSG)
+    categories/page.tsx          # Categories index
+    categories/[slug]/page.tsx   # Category detail (SSG)
+  components/
+    layout/Header.tsx
+    domain/
+      ToolCard.tsx               # Card with compare button
+      CompareBar.tsx             # Sticky bottom compare bar
+      ComparisonTable.tsx        # Side-by-side table
+      FilterPanel.tsx            # Sidebar filters
+      SearchBar.tsx
+      ScoreBadge.tsx
+      CategoryPill.tsx
+      CTAButton.tsx
+  lib/
+    repository.ts                # Data access layer (swap for Supabase here)
+    compare-store.ts             # Zustand store for compare state
+    utils.ts
+  types/index.ts
+  data/
+    tools.ts                     # 15 tools mock data
+    categories.ts                # 8 categories
+    comparisons.ts               # 6 preset comparisons
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Monetization structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Affiliate links
+Each tool has an `affiliateUrl` field. The `CTAButton` renders with `rel="sponsored"` when affiliate.
+Currently null in mock data — replace with real links per tool.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+High-value placements:
+- Tool detail page CTA (primary button)
+- Comparison table header (per-tool CTA)
+- Preset comparison "recommended" cards
 
-## Learn More
+### 2. Sponsored placements (ready to add)
+Tools have `sponsored: boolean`. Add badge and priority sorting when true.
+`featured: boolean` controls homepage featuring.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. SEO
+- `/compare/chatgpt-vs-claude` — high search intent
+- `/categories/image-generation`
+- `/tools/midjourney`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All pages use `generateMetadata()`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Supabase migration
 
-## Deploy on Vercel
+All data access is in `src/lib/repository.ts`. To migrate:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create Supabase project and run schema migrations
+2. Replace functions in `repository.ts` with supabase queries
+3. No changes in pages or components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Suggested schema:
+```sql
+tools (id, slug, name, short_description, full_description, category, pricing_model,
+       starting_price, free_plan, api_available, open_source, japanese_support,
+       platforms, official_url, affiliate_url, logo_url, status, featured, sponsored, updated_at)
+tool_scores (tool_id, beginner, professional, value, speed, quality, japanese)
+categories (id, slug, name, description, icon)
+comparisons (id, slug, title, summary, tool_slugs, updated_at)
+comparison_recommendations (comparison_id, tool_slug, reason)
+```
+
+## Running locally
+
+```
+npm install
+npm run dev
+```
+
+## Next steps to increase revenue
+
+1. Add real affiliate links (ChatGPT Plus, Claude Pro, Cursor, ElevenLabs all have programs)
+2. Expand to 100 tools (data layer only, no code changes needed)
+3. Add comparison SEO pages for "best AI for [use case]" queries
+4. Enable sponsored placement slots (field already exists)
+5. Supabase + admin UI for non-technical content management
