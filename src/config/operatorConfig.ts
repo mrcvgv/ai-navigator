@@ -151,7 +151,7 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   operatorTradeName: "Cream",                                 // ブランド名
 
   // ── Address & Contact ─────────────────────────────────────
-  address: "TODO: [Full Address, City, Prefecture, Postal Code, Japan]",
+  address: "",
   phone: null,
   disclosePhoneOnRequest: true,
   contactEmail: "TODO: contact@example.com",
