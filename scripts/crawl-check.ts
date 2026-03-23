@@ -42,9 +42,11 @@ async function main() {
     const url = tool.officialUrl;
     process.stdout.write(`  ${tool.slug}... `);
     const status = await checkUrl(url);
-    const ok = status >= 200 && status < 400;
+    // 403/405 = bot protection (alive), 0 = timeout, 404 = truly dead
+  const ok = (status >= 200 && status < 400) || status === 403 || status === 405;
     results.push({ slug: tool.slug, lastChecked: now, httpStatus: status, ok });
-    console.log(ok ? `✓ ${status}` : `✗ ${status}`);
+    const note = (status === 403 || status === 405) ? " (bot-blocked)" : "";
+    console.log(`${ok ? "✓" : "✗"} ${status}${note}`);
   }
 
   const outPath = path.join(__dirname, "../src/data/tool-status.json");

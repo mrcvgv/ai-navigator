@@ -1,0 +1,473 @@
+[
+  {
+    "slug": "chatgpt",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "claude",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "gemini",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "perplexity",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "midjourney",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "ideogram",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "flux",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "runway",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "pika",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "elevenlabs",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "suno",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "notion-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "cursor",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "replit",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "descript",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "grok",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "microsoft-copilot",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "deepseek",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "mistral",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "poe",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "character-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "meta-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "you",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "github-copilot",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "windsurf",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "bolt",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "v0",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "lovable",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "tabnine",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "aider",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "stable-diffusion",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "dall-e-3",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "adobe-firefly",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "leonardo-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "kling",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 405,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "canva-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "recraft",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "sora",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "heygen",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "synthesia",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "luma-dream",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "invideo-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "whisper",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "otter-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "fireflies",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "murf",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "udio",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "adobe-podcast",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "zapier-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "make",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "taskade",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "coda-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "reclaim-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "motion-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "consensus",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "elicit",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "scite",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "gamma",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "beautiful-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "tome",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 404,
+    "ok": false
+  },
+  {
+    "slug": "figma-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "framer-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "uizard",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "locofy",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "jasper",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "copy-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "writesonic",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "grammarly-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 405,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "sudowrite",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "adcreative-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "hootsuite-owly",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "buffer-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "julius-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 403,
+    "ok": true,
+    "note": "bot-blocked"
+  },
+  {
+    "slug": "obviously-ai",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  },
+  {
+    "slug": "akkio",
+    "lastChecked": "2026-03-23",
+    "httpStatus": 200,
+    "ok": true
+  }
+]
