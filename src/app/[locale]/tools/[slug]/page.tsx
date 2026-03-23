@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ScoreBadge } from "@/components/domain/ScoreBadge";
 import { CTAButton } from "@/components/domain/CTAButton";
+import { RatingWidget } from "@/components/domain/RatingWidget";
 import { ToolCard } from "@/components/domain/ToolCard";
 import {
   getToolBySlug,
@@ -247,6 +248,8 @@ export default async function ToolDetailPage({ params }: Props) {
               </a>
             )}
           </div>
+
+          <RatingWidget slug={tool.slug} />
 
           <div className="text-xs text-center text-muted-foreground">
             Last updated {tool.updatedAt}
