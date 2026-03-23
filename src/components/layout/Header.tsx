@@ -1,18 +1,22 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Compass } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const nav = [
-  { label: "Explore", href: "/explore" },
-  { label: "Compare", href: "/compare" },
-  { label: "Categories", href: "/categories" },
-];
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export function Header() {
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations("nav");
+
+  const nav = [
+    { label: t("explore"), href: "/explore" },
+    { label: t("compare"), href: "/compare" },
+    { label: t("categories"), href: "/categories" },
+  ] as const;
+
+  const switchLocale = (locale === "en" ? "ja" : "en") as "en" | "ja";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,6 +41,13 @@ export function Header() {
               {label}
             </Link>
           ))}
+          <Link
+            href={pathname as any}
+            locale={switchLocale}
+            className="ml-2 rounded-md border border-border px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
+          >
+            {t("switchLang")}
+          </Link>
         </nav>
       </div>
     </header>

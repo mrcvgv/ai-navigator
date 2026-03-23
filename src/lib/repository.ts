@@ -62,10 +62,6 @@ export async function getFilteredTools(filters: Partial<FilterState>): Promise<T
     result = result.filter((t) => t.openSource);
   }
 
-  if (filters.japaneseSupport) {
-    result = result.filter((t) => t.japaneseSupport);
-  }
-
   if (filters.pricingModel) {
     result = result.filter((t) => t.pricingModel === filters.pricingModel);
   }

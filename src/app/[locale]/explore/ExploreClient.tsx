@@ -21,7 +21,6 @@ const DEFAULT_FILTERS: FilterState = {
   freePlan: false,
   apiAvailable: false,
   openSource: false,
-  japaneseSupport: false,
   pricingModel: "",
   platform: "",
   sortBy: "rating",
@@ -52,7 +51,6 @@ export function ExploreClient({ initialTools, categories, initialCategory, initi
     if (filters.freePlan) result = result.filter((t) => t.freePlan);
     if (filters.apiAvailable) result = result.filter((t) => t.apiAvailable);
     if (filters.openSource) result = result.filter((t) => t.openSource);
-    if (filters.japaneseSupport) result = result.filter((t) => t.japaneseSupport);
     if (filters.pricingModel) result = result.filter((t) => t.pricingModel === filters.pricingModel);
     if (filters.platform) result = result.filter((t) => t.platforms.includes(filters.platform as any));
 

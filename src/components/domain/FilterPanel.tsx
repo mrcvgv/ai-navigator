@@ -99,7 +99,6 @@ export function FilterPanel({ filters, categories, onChange }: FilterPanelProps)
               { key: "freePlan", label: "Free plan available" },
               { key: "apiAvailable", label: "API available" },
               { key: "openSource", label: "Open source" },
-              { key: "japaneseSupport", label: "Japanese support" },
             ] as const
           ).map(({ key, label }) => (
             <label key={key} className="flex cursor-pointer items-center gap-2 text-sm">

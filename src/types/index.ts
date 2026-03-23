@@ -10,7 +10,6 @@ export interface ToolScores {
   value: number;         // 1-5
   speed: number;         // 1-5
   quality: number;       // 1-5
-  japanese: number;      // 1-5
 }
 
 export interface Tool {
@@ -29,7 +28,6 @@ export interface Tool {
   freePlan: boolean;
   apiAvailable: boolean;
   openSource: boolean;
-  japaneseSupport: boolean;
   platforms: Platform[];
   officialUrl: string;
   affiliateUrl: string | null;
@@ -38,8 +36,8 @@ export interface Tool {
   status: ToolStatus;
   updatedAt: string;
   scores: ToolScores;
-  alternatives: string[];        // tool slugs
-  relatedComparisons: string[];  // comparison slugs
+  alternatives: string[];
+  relatedComparisons: string[];
   featured: boolean;
   sponsored: boolean;
 }
@@ -69,8 +67,42 @@ export interface FilterState {
   freePlan: boolean;
   apiAvailable: boolean;
   openSource: boolean;
-  japaneseSupport: boolean;
   pricingModel: PricingModel | "";
   platform: Platform | "";
-  sortBy: "name" | "rating" | "newest";
+  sortBy: "name" | "rating" | "newest" | "community";
+}
+
+// ─── User Ratings ─────────────────────────────────────────────────────────────
+
+export type RatingReason =
+  | "too_expensive"
+  | "not_as_advertised"
+  | "limited_features"
+  | "better_alternatives"
+  | "poor_reliability"
+  | "other";
+
+export interface StoredRating {
+  value: number;       // 1-5
+  timestamp: number;
+  ipHash: string;
+  reason?: RatingReason;
+  weight: number;      // 1.0 normal, 0 if flagged
+}
+
+export interface RatingStats {
+  bayesianScore: number;
+  rawAverage: number;
+  count: number;
+  distribution: [number, number, number, number, number]; // [1★,2★,3★,4★,5★]
+}
+
+// ─── Tool status (from crawler) ───────────────────────────────────────────────
+
+export interface ToolStatusEntry {
+  slug: string;
+  lastChecked: string;   // ISO date
+  httpStatus: number;
+  pricingChanged: boolean;
+  detectedPrice?: string;
 }

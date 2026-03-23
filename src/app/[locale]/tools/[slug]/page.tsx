@@ -38,7 +38,6 @@ const SCORE_LABELS = [
   { key: "value" as const, label: "Value for money" },
   { key: "speed" as const, label: "Speed" },
   { key: "quality" as const, label: "Output quality" },
-  { key: "japanese" as const, label: "Japanese support" },
 ];
 
 export default async function ToolDetailPage({ params }: Props) {
@@ -51,7 +50,7 @@ export default async function ToolDetailPage({ params }: Props) {
     getComparisonsForTool(tool.slug),
   ]);
 
-  const avgScore = (Object.values(tool.scores).reduce((s, v) => s + v, 0) / 6).toFixed(1);
+  const avgScore = (Object.values(tool.scores).reduce((s, v) => s + v, 0) / 5).toFixed(1);
   const topScore = Object.entries(tool.scores).sort((a, b) => b[1] - a[1])[0];
   const SCORE_NAME: Record<string, string> = {
     beginner: "beginner-friendly",
@@ -59,7 +58,6 @@ export default async function ToolDetailPage({ params }: Props) {
     value: "value for money",
     speed: "speed",
     quality: "output quality",
-    japanese: "Japanese support",
   };
 
   return (
@@ -108,7 +106,6 @@ export default async function ToolDetailPage({ params }: Props) {
           {tool.freePlan
             ? "A free plan is available, making it easy to try before committing."
             : `Starts at ${tool.startingPrice ?? "paid"} with no free tier.`}{" "}
-          {tool.japaneseSupport ? "Japanese is supported." : "No dedicated Japanese support."}
         </p>
         <div className="flex flex-wrap gap-2">
           {tool.bestFor.slice(0, 3).map((b) => (
@@ -214,8 +211,7 @@ export default async function ToolDetailPage({ params }: Props) {
                 ["Free plan", tool.freePlan ? <Check key="fp" className="h-4 w-4 text-green-500" /> : <X key="fp" className="h-4 w-4 text-muted-foreground/40" />],
                 ["API", tool.apiAvailable ? <Check key="api" className="h-4 w-4 text-green-500" /> : <X key="api" className="h-4 w-4 text-muted-foreground/40" />],
                 ["Open source", tool.openSource ? <Check key="os" className="h-4 w-4 text-green-500" /> : <X key="os" className="h-4 w-4 text-muted-foreground/40" />],
-                ["Japanese", tool.japaneseSupport ? <Check key="jp" className="h-4 w-4 text-green-500" /> : <X key="jp" className="h-4 w-4 text-muted-foreground/40" />],
-              ].map(([label, value]) => (
+].map(([label, value]) => (
                 <div key={String(label)} className="flex items-center justify-between">
                   <dt className="text-muted-foreground">{label}</dt>
                   <dd>{value}</dd>

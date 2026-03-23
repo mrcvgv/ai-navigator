@@ -48,7 +48,6 @@ export function ComparisonTable({ tools }: ComparisonTableProps) {
     { key: "value" as const, label: "Value for money" },
     { key: "speed" as const, label: "Speed" },
     { key: "quality" as const, label: "Output quality" },
-    { key: "japanese" as const, label: "Japanese support" },
   ];
 
   return (
@@ -100,11 +99,6 @@ export function ComparisonTable({ tools }: ComparisonTableProps) {
           <Row label="Open source">
             {tools.map((t) => (
               <Cell key={t.slug}><Bool value={t.openSource} /></Cell>
-            ))}
-          </Row>
-          <Row label="Japanese support">
-            {tools.map((t) => (
-              <Cell key={t.slug}><Bool value={t.japaneseSupport} /></Cell>
             ))}
           </Row>
           <Row label="Platforms">
