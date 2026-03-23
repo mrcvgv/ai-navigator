@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
+import { LegalFooter } from "@/components/layout/LegalFooter";
 import { CompareBar } from "@/components/domain/CompareBar";
 import { Analytics } from "@vercel/analytics/next";
 import { SessionProvider } from "next-auth/react";
@@ -27,9 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="flex-1">{children}</main>
           <CompareBar />
         </SessionProvider>
-        <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-          <p>AI Navigator &copy; {new Date().getFullYear()} &mdash; Helping you decide, not just search.</p>
-        </footer>
+        <LegalFooter />
         <Analytics />
       </body>
     </html>
