@@ -8,6 +8,8 @@ import { ScoreBadge } from "@/components/domain/ScoreBadge";
 import { CTAButton } from "@/components/domain/CTAButton";
 import { RatingWidget } from "@/components/domain/RatingWidget";
 import { ToolCard } from "@/components/domain/ToolCard";
+import { ReviewsSection } from "@/components/domain/ReviewsSection";
+import { ShareBar } from "@/components/domain/ShareBar";
 import {
   getToolBySlug,
   getAlternatives,
@@ -190,6 +192,26 @@ export default async function ToolDetailPage({ params }: Props) {
               </section>
             </>
           )}
+
+          <Separator />
+
+          {/* Share */}
+          <section>
+            <h2 className="mb-3 font-semibold">Share {tool.name}</h2>
+            <ShareBar
+              toolName={tool.name}
+              toolSlug={tool.slug}
+              shortDescription={tool.shortDescription}
+            />
+          </section>
+
+          <Separator />
+
+          {/* Reviews */}
+          <section>
+            <h2 className="mb-4 font-semibold">Community Reviews</h2>
+            <ReviewsSection slug={tool.slug} toolName={tool.name} />
+          </section>
         </div>
 
         {/* Right sidebar */}

@@ -97,6 +97,22 @@ export interface RatingStats {
   distribution: [number, number, number, number, number]; // [1★,2★,3★,4★,5★]
 }
 
+// ─── User Reviews ─────────────────────────────────────────────────────────────
+
+export interface UserReview {
+  id: string;
+  slug: string;
+  userId: string;          // hashed OAuth sub
+  userName: string;
+  userAvatar: string | null;
+  rating: number;          // 1-5
+  title: string;
+  body: string;
+  createdAt: number;       // ms timestamp
+  helpfulCount: number;
+  helpfulBy: string[];     // hashed userIds
+}
+
 // ─── Tool status (from crawler) ───────────────────────────────────────────────
 
 export interface ToolStatusEntry {
