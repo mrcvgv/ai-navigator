@@ -1,22 +1,20 @@
 "use client";
 
-import { Compass } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Compass, GitCompare } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { useCompare } from "@/lib/compare-store";
+
+const nav = [
+  { label: "比較する", href: "/compare", highlight: true },
+  { label: "探す", href: "/explore" },
+  { label: "カテゴリ", href: "/categories" },
+];
 
 export function Header() {
   const pathname = usePathname();
-  const locale = useLocale();
-  const t = useTranslations("nav");
-
-  const nav = [
-    { label: t("explore"), href: "/explore" },
-    { label: t("compare"), href: "/compare" },
-    { label: t("categories"), href: "/categories" },
-  ] as const;
-
-  const switchLocale = (locale === "en" ? "ja" : "en") as "en" | "ja";
+  const { tools } = useCompare();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -27,27 +25,28 @@ export function Header() {
         </Link>
 
         <nav className="flex items-center gap-1">
-          {nav.map(({ label, href }) => (
+          {nav.map(({ label, href, highlight }) => (
             <Link
               key={href}
               href={href}
               className={cn(
-                "rounded-md px-3 py-1.5 text-sm transition-colors",
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm transition-colors font-medium",
                 pathname.startsWith(href)
-                  ? "bg-accent text-accent-foreground font-medium"
-                  : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                  ? "bg-primary text-primary-foreground"
+                  : highlight
+                    ? "text-primary border border-primary/40 hover:bg-primary hover:text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
               )}
             >
+              {highlight && <GitCompare className="h-3.5 w-3.5" />}
               {label}
+              {highlight && tools.length > 0 && (
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary-foreground text-[10px] font-bold text-primary">
+                  {tools.length}
+                </span>
+              )}
             </Link>
           ))}
-          <Link
-            href={pathname as any}
-            locale={switchLocale}
-            className="ml-2 rounded-md border border-border px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
-          >
-            {t("switchLang")}
-          </Link>
         </nav>
       </div>
     </header>

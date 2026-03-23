@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GitCompare, Plus, ArrowRight } from "lucide-react";
+import { GitCompare, ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/domain/ComparisonTable";
 import { getToolsBySlugs, getAllComparisons } from "@/lib/repository";
 
 export const metadata: Metadata = {
-  title: "Compare AI Tools",
-  description: "Side-by-side comparison of AI tools. Pick up to 3 tools and see exactly how they stack up.",
+  title: "AIツールを比較する",
+  description: "AIツールを横断比較。最大3つを選んで価格・機能・スコアを一覧で確認。",
 };
 
 interface Props {
@@ -28,36 +28,50 @@ export default async function ComparePage({ searchParams }: Props) {
         /* ── Active comparison ── */
         <div>
           <div className="mb-8">
-            <p className="mb-1 text-sm font-medium text-primary uppercase tracking-wide">Side-by-side comparison</p>
+            <Link href="/compare" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+              ← 比較一覧に戻る
+            </Link>
             <h1 className="text-3xl font-bold">
               {selectedTools.map((t) => t.name).join(" vs ")}
             </h1>
             <p className="mt-2 text-muted-foreground">
-              Comparing {selectedTools.length} AI tools across pricing, features, and scores.
+              {selectedTools.length}つのAIツールを比較中 — 価格・機能・スコア
             </p>
           </div>
           <ComparisonTable tools={selectedTools} />
         </div>
       ) : (
-        /* ── Landing state: no tools selected ── */
+        /* ── Landing: compare-first design ── */
         <div>
+          {/* Hero */}
           <div className="mb-10 text-center">
-            <GitCompare className="mx-auto mb-4 h-10 w-10 text-primary" />
-            <h1 className="mb-2 text-3xl font-bold">Compare AI Tools</h1>
-            <p className="mx-auto max-w-xl text-muted-foreground">
-              Add tools from the{" "}
-              <Link href="/explore" className="text-primary hover:underline">
-                Explore page
-              </Link>{" "}
-              using the Compare button, or start with a popular comparison below.
+            <GitCompare className="mx-auto mb-4 h-12 w-12 text-primary" />
+            <h1 className="mb-3 text-3xl font-bold">AIツールを比較する</h1>
+            <p className="mx-auto max-w-lg text-muted-foreground">
+              最大3つのツールを選んで、価格・機能・スコアを横断比較。
+              どれが自分に合うかを<strong>確信を持って</strong>選ぼう。
             </p>
           </div>
 
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-semibold text-lg">Popular comparisons</h2>
-            <span className="text-sm text-muted-foreground">{allComparisons.length} total</span>
+          {/* Quick start: pick tools */}
+          <div className="mb-12 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 sm:p-8">
+            <h2 className="mb-2 font-semibold text-lg">今すぐ比較を始める</h2>
+            <p className="mb-5 text-sm text-muted-foreground">
+              Exploreページでツールカードの「Compare」を押すと、ここに並んで比較できます。
+            </p>
+            <Link href="/explore">
+              <Button className="gap-2">
+                <Search className="h-4 w-4" />
+                ツールを探して追加する
+              </Button>
+            </Link>
           </div>
 
+          {/* Popular comparisons */}
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="font-bold text-xl">人気の比較</h2>
+            <span className="text-sm text-muted-foreground">{allComparisons.length}件</span>
+          </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {allComparisons.map((comp) => (
               <Link
@@ -71,24 +85,10 @@ export default async function ComparePage({ searchParams }: Props) {
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{comp.summary}</p>
                 <div className="flex items-center gap-1 text-xs font-medium text-primary">
-                  See full comparison
-                  <ArrowRight className="h-3 w-3" />
+                  比較を見る <ArrowRight className="h-3 w-3" />
                 </div>
               </Link>
             ))}
-          </div>
-
-          <div className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
-            <h2 className="mb-2 font-semibold">Can't find your comparison?</h2>
-            <p className="mb-5 text-sm text-muted-foreground">
-              Browse all tools and add up to 3 to compare side-by-side.
-            </p>
-            <Link href="/explore">
-              <Button className="gap-2">
-                <Plus className="h-4 w-4" />
-                Browse tools to compare
-              </Button>
-            </Link>
           </div>
         </div>
       )}

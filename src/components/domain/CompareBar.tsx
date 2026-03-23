@@ -1,57 +1,87 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { X, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { X, ArrowRight, GitCompare } from "lucide-react";
 import { useCompare } from "@/lib/compare-store";
+import { tools as allTools } from "@/data/tools";
+import { cn } from "@/lib/utils";
 
 export function CompareBar() {
-  const { tools, remove, clear } = useCompare();
+  const { tools: slugs, remove, clear } = useCompare();
   const router = useRouter();
 
-  if (tools.length === 0) return null;
+  if (slugs.length === 0) return null;
+
+  const selectedTools = slugs.map((s) => allTools.find((t) => t.slug === s)).filter(Boolean) as typeof allTools;
+  const canCompare = slugs.length >= 2;
+  const slots = Array.from({ length: 3 - slugs.length });
 
   const handleCompare = () => {
-    router.push(`/compare?tools=${tools.join(",")}`);
+    router.push(`/compare?tools=${slugs.join(",")}`);
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-lg">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">Comparing:</span>
-          <div className="flex gap-1.5">
-            {tools.map((slug) => (
-              <span
-                key={slug}
-                className="flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary"
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/98 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/90">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+
+        {/* Left: label + tool slots */}
+        <div className="flex items-center gap-3 overflow-hidden">
+          <GitCompare className="h-4 w-4 text-primary shrink-0" />
+          <span className="text-sm font-medium text-muted-foreground shrink-0 hidden sm:block">Compare:</span>
+
+          <div className="flex items-center gap-2">
+            {selectedTools.map((tool) => (
+              <div
+                key={tool.slug}
+                className="flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/5 pl-2 pr-1.5 py-1"
               >
-                {slug}
+                <span className="flex h-5 w-5 items-center justify-center rounded bg-primary text-[11px] font-bold text-primary-foreground shrink-0">
+                  {tool.name[0]}
+                </span>
+                <span className="text-sm font-medium max-w-[90px] truncate">{tool.name}</span>
                 <button
-                  onClick={() => remove(slug)}
-                  className="ml-0.5 rounded-full hover:text-destructive"
+                  onClick={() => remove(tool.slug)}
+                  className="ml-0.5 rounded p-0.5 text-muted-foreground hover:text-destructive transition-colors"
                 >
                   <X className="h-3 w-3" />
                 </button>
-              </span>
+              </div>
             ))}
-            {tools.length < 3 && (
-              <span className="flex items-center rounded-full border border-dashed border-muted-foreground/40 px-2.5 py-1 text-xs text-muted-foreground">
-                + add {3 - tools.length} more
-              </span>
-            )}
+
+            {slots.map((_, i) => (
+              <div
+                key={i}
+                className="flex h-8 items-center gap-1.5 rounded-lg border border-dashed border-muted-foreground/30 px-3 text-xs text-muted-foreground/50"
+              >
+                + add
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" onClick={clear} className="text-xs">
+        {/* Right: clear + compare */}
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={clear}
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1"
+          >
             Clear
-          </Button>
-          <Button size="sm" onClick={handleCompare} className="gap-1.5" disabled={tools.length < 2}>
+          </button>
+          <button
+            onClick={handleCompare}
+            disabled={!canCompare}
+            className={cn(
+              "flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all",
+              canCompare
+                ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md shadow-primary/30"
+                : "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
+            )}
+          >
             Compare now
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Button>
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
+
       </div>
     </div>
   );
