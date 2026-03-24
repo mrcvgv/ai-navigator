@@ -6,18 +6,13 @@ export const metadata: Metadata = {
   title: "Contact",
   description: `Contact ${C.siteName} — operated by ${C.operatorTradeName}.`,
   alternates: {
-    canonical: `${C.siteUrl}/en/contact`,
-    languages: {
-      en: `${C.siteUrl}/en/contact`,
-      ja: `${C.siteUrl}/ja/contact`,
-      "x-default": `${C.siteUrl}/en/contact`,
-    },
+    canonical: `${C.siteUrl}/contact`,
   },
 };
 
 export default function ContactPage() {
   return (
-    <LegalPageLayout lang="en" title="Contact" lastUpdated="2026-03-23">
+    <LegalPageLayout title="Contact" lastUpdated="2026-03-23">
       <p>
         For inquiries about {C.siteName}, service support, legal notices, or privacy
         requests, please reach out via the email address below.

@@ -161,7 +161,7 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   siteDescription: "Compare AI tools side-by-side. Find the right tool with confidence.",
   siteUrl: "https://ai-navigator.example.com",   // TODO: real URL
   defaultLocale: "en",
-  supportedLocales: ["en", "ja"],
+  supportedLocales: ["en"],
 
   // ── Business ──────────────────────────────────────────────
   businessCategory: "Information services / AI tool navigation",
@@ -244,5 +244,5 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   privacyContactEmail: "TODO: privacy@example.com",
   analyticsServices: ["Vercel Analytics"],
   paymentProcessors: ["Stripe"],
-  authProviders: ["GitHub", "Google"],
+  authProviders: [],
 } as const satisfies OperatorConfig;

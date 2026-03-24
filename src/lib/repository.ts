@@ -13,28 +13,31 @@ import type { Tool, Category, Comparison, FilterState } from "@/types";
 
 // ─── Tools ───────────────────────────────────────────────────────────────────
 
+/** Active tools only — filters out status: "dead" */
+const activeTools = mockTools.filter((t) => t.status !== "dead");
+
 export async function getAllTools(): Promise<Tool[]> {
-  return mockTools;
+  return activeTools;
 }
 
 export async function getToolBySlug(slug: string): Promise<Tool | null> {
-  return mockTools.find((t) => t.slug === slug) ?? null;
+  return activeTools.find((t) => t.slug === slug) ?? null;
 }
 
 export async function getToolsByCategory(categorySlug: string): Promise<Tool[]> {
-  return mockTools.filter((t) => t.category === categorySlug);
+  return activeTools.filter((t) => t.category === categorySlug);
 }
 
 export async function getFeaturedTools(): Promise<Tool[]> {
-  return mockTools.filter((t) => t.featured);
+  return activeTools.filter((t) => t.featured);
 }
 
 export async function getToolsBySlugs(slugs: string[]): Promise<Tool[]> {
-  return mockTools.filter((t) => slugs.includes(t.slug));
+  return activeTools.filter((t) => slugs.includes(t.slug));
 }
 
 export async function getFilteredTools(filters: Partial<FilterState>): Promise<Tool[]> {
-  let result = [...mockTools];
+  let result = [...activeTools];
 
   if (filters.search) {
     const q = filters.search.toLowerCase();
@@ -84,7 +87,7 @@ export async function getFilteredTools(filters: Partial<FilterState>): Promise<T
 }
 
 export async function getAlternatives(tool: Tool): Promise<Tool[]> {
-  return mockTools.filter((t) => tool.alternatives.includes(t.slug));
+  return activeTools.filter((t) => tool.alternatives.includes(t.slug));
 }
 
 // ─── Categories ───────────────────────────────────────────────────────────────
@@ -92,7 +95,7 @@ export async function getAlternatives(tool: Tool): Promise<Tool[]> {
 export async function getAllCategories(): Promise<Category[]> {
   return mockCategories.map((cat) => ({
     ...cat,
-    toolCount: mockTools.filter((t) => t.category === cat.slug).length,
+    toolCount: activeTools.filter((t) => t.category === cat.slug).length,
   }));
 }
 
@@ -101,7 +104,7 @@ export async function getCategoryBySlug(slug: string): Promise<Category | null> 
   if (!cat) return null;
   return {
     ...cat,
-    toolCount: mockTools.filter((t) => t.category === slug).length,
+    toolCount: activeTools.filter((t) => t.category === slug).length,
   };
 }
 
@@ -116,5 +119,9 @@ export async function getComparisonBySlug(slug: string): Promise<Comparison | nu
 }
 
 export async function getComparisonsForTool(toolSlug: string): Promise<Comparison[]> {
-  return mockComparisons.filter((c) => c.toolSlugs.includes(toolSlug));
+  // Only return comparisons where all referenced tools are still active
+  return mockComparisons.filter(
+    (c) => c.toolSlugs.includes(toolSlug) &&
+           c.toolSlugs.every((s) => activeTools.some((t) => t.slug === s))
+  );
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { Star, ThumbsUp } from "lucide-react";
-import { useSession } from "next-auth/react";
 import type { UserReview } from "@/types";
 
 interface Props {
@@ -35,11 +34,11 @@ function timeAgo(ms: number): string {
 }
 
 export function ReviewList({ slug, refreshKey = 0 }: Props) {
-  const { data: session } = useSession();
   const [reviews, setReviews] = useState<UserReview[]>([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [helpfulClicked, setHelpfulClicked] = useState<Set<string>>(new Set());
 
   const load = useCallback(async (p: number) => {
     setLoading(true);
@@ -56,7 +55,8 @@ export function ReviewList({ slug, refreshKey = 0 }: Props) {
   useEffect(() => { setPage(0); load(0); }, [slug, refreshKey, load]);
 
   async function markHelpful(reviewId: string) {
-    if (!session) return;
+    if (helpfulClicked.has(reviewId)) return;
+    setHelpfulClicked((prev) => new Set(prev).add(reviewId));
     await fetch(`/api/reviews/${slug}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -99,11 +99,11 @@ export function ReviewList({ slug, refreshKey = 0 }: Props) {
           <p className="text-sm text-muted-foreground leading-relaxed">{r.body}</p>
           <button
             onClick={() => markHelpful(r.id)}
-            disabled={!session}
-            className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground disabled:cursor-default transition-colors"
+            disabled={helpfulClicked.has(r.id)}
+            className={`flex items-center gap-1.5 text-xs transition-colors disabled:cursor-default ${helpfulClicked.has(r.id) ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
           >
-            <ThumbsUp className="h-3.5 w-3.5" />
-            Helpful {r.helpfulCount > 0 && `(${r.helpfulCount})`}
+            <ThumbsUp className={`h-3.5 w-3.5 ${helpfulClicked.has(r.id) ? "fill-primary" : ""}`} />
+            {helpfulClicked.has(r.id) ? "Thanks!" : `Helpful${r.helpfulCount > 0 ? ` (${r.helpfulCount})` : ""}`}
           </button>
         </div>
       ))}

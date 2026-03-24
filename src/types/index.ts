@@ -40,6 +40,10 @@ export interface Tool {
   relatedComparisons: string[];
   featured: boolean;
   sponsored: boolean;
+  /** Set to true when added automatically by the crawler. Human-curated tools omit this. */
+  autoAdded?: boolean;
+  /** ISO date string when first added. Omit on legacy tools. */
+  addedAt?: string;
 }
 
 export interface Category {

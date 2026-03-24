@@ -5,14 +5,36 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
 
+export type CtaType =
+  | "try_free"
+  | "visit_site"
+  | "compare_now"
+  | "featured_tool"
+  | "related_tool"
+  | "sponsored_tool"
+  | "verdict_cta"
+  | "sidebar_cta";
+
+export type PageType =
+  | "home"
+  | "explore"
+  | "category"
+  | "compare"
+  | "tool";
+
 interface CTAButtonProps {
   href: string;
   label?: string;
   variant?: "primary" | "secondary";
   className?: string;
   isAffiliate?: boolean;
+  isSponsored?: boolean;
+  toolSlug?: string;
   toolName?: string;
-  context?: string;
+  comparisonSlug?: string;
+  pageType?: PageType;
+  ctaType?: CtaType;
+  ctaPosition?: "top" | "bottom" | "sidebar" | "card" | "verdict";
 }
 
 export function CTAButton({
@@ -21,16 +43,33 @@ export function CTAButton({
   variant = "primary",
   className,
   isAffiliate = false,
+  isSponsored = false,
+  toolSlug,
   toolName,
-  context,
+  comparisonSlug,
+  pageType,
+  ctaType,
+  ctaPosition,
 }: CTAButtonProps) {
   const handleClick = () => {
-    track("cta_click", {
+    let destinationDomain = "";
+    try {
+      destinationDomain = new URL(href).hostname;
+    } catch {
+      destinationDomain = href;
+    }
+
+    track("outbound_click", {
       label,
-      href,
-      isAffiliate,
+      toolSlug: toolSlug ?? "",
       toolName: toolName ?? "",
-      context: context ?? "unknown",
+      comparisonSlug: comparisonSlug ?? "",
+      pageType: pageType ?? "unknown",
+      ctaType: ctaType ?? "visit_site",
+      ctaPosition: ctaPosition ?? "unknown",
+      destinationDomain,
+      isAffiliate,
+      isSponsoredPlacement: isSponsored,
     });
   };
 
@@ -38,7 +77,7 @@ export function CTAButton({
     <a
       href={href}
       target="_blank"
-      rel={isAffiliate ? "noopener noreferrer sponsored" : "noopener noreferrer"}
+      rel={isAffiliate || isSponsored ? "noopener noreferrer sponsored" : "noopener noreferrer"}
       className={cn("inline-flex", className)}
       onClick={handleClick}
     >

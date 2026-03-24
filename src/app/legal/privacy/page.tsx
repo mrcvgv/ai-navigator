@@ -8,18 +8,13 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: `Privacy Policy for ${C.siteName}, operated by ${C.operatorTradeName}.`,
   alternates: {
-    canonical: `${C.siteUrl}/en/privacy`,
-    languages: {
-      en: `${C.siteUrl}/en/privacy`,
-      ja: `${C.siteUrl}/ja/privacy`,
-      "x-default": `${C.siteUrl}/en/privacy`,
-    },
+    canonical: `${C.siteUrl}/legal/privacy`,
   },
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPageLayout lang="en" title="Privacy Policy" lastUpdated={LAST_UPDATED}>
+    <LegalPageLayout title="Privacy Policy" lastUpdated={LAST_UPDATED}>
       <p>
         {C.operatorTradeName} ("{C.siteName}") respects your privacy. This Privacy Policy
         explains what personal data we collect, how we use it, and your rights regarding

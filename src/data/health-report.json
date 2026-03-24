@@ -1,0 +1,15 @@
+{
+  "generatedAt": null,
+  "summary": {
+    "totalTools": 0,
+    "activeTools": 0,
+    "deadTools": 0,
+    "autoAddedTools": 0,
+    "totalComparisons": 0,
+    "thinContentTools": 0,
+    "critical": 0,
+    "warnings": 0,
+    "infos": 0
+  },
+  "issues": []
+}

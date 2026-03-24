@@ -8,18 +8,13 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description: `Terms of Service for ${C.siteName}.`,
   alternates: {
-    canonical: `${C.siteUrl}/en/terms`,
-    languages: {
-      en: `${C.siteUrl}/en/terms`,
-      ja: `${C.siteUrl}/ja/terms`,
-      "x-default": `${C.siteUrl}/en/terms`,
-    },
+    canonical: `${C.siteUrl}/legal/terms`,
   },
 };
 
 export default function TermsPage() {
   return (
-    <LegalPageLayout lang="en" title="Terms of Service" lastUpdated={LAST_UPDATED}>
+    <LegalPageLayout title="Terms of Service" lastUpdated={LAST_UPDATED}>
       <p>
         These Terms of Service ("Terms") govern your use of {C.siteName} and all
         related services operated by {C.operatorLegalName} (trade name:{" "}
@@ -109,7 +104,7 @@ export default function TermsPage() {
         Pricing for paid features is listed at the time of purchase. Payment is processed
         by {C.paymentProcessors.join(", ")}. Refund and cancellation terms are described
         in our{" "}
-        <a href="/en/legal" className="underline hover:text-foreground">
+        <a href="/legal/disclosure" className="underline hover:text-foreground">
           Legal Disclosure
         </a>
         .
@@ -163,7 +158,7 @@ export default function TermsPage() {
       <h2>12. Privacy</h2>
       <p>
         Your use of the service is also governed by our{" "}
-        <a href="/en/privacy" className="underline hover:text-foreground">
+        <a href="/legal/privacy" className="underline hover:text-foreground">
           Privacy Policy
         </a>
         , which is incorporated into these Terms by reference.

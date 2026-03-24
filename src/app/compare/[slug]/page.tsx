@@ -1,11 +1,14 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, GitCompare, ExternalLink } from "lucide-react";
+import { Check, X, ArrowRight, GitCompare } from "lucide-react";
 import { getComparisonBySlug, getToolsBySlugs, getAllComparisons } from "@/lib/repository";
 import { ComparisonTable } from "@/components/domain/ComparisonTable";
 import { CTAButton } from "@/components/domain/CTAButton";
 import { Badge } from "@/components/ui/badge";
+import { AffiliateDisclosure } from "@/components/domain/AffiliateDisclosure";
+import { SaveComparisonCTA } from "@/components/domain/SaveComparisonCTA";
+import { SponsoredSlot } from "@/components/domain/SponsoredSlot";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -40,7 +43,36 @@ export default async function ComparePresetPage({ params }: Props) {
     .filter((c) => c.slug !== slug && c.toolSlugs.some((s) => comp.toolSlugs.includes(s)))
     .slice(0, 4);
 
+  const BASE =
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+    "https://ai-navigator.vercel.app";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: comp.title,
+    description: comp.summary,
+    dateModified: comp.updatedAt,
+    url: `${BASE}/compare/${slug}`,
+    about: tools.map((t) => ({
+      "@type": "SoftwareApplication",
+      name: t.name,
+      url: t.officialUrl,
+      applicationCategory: "AIApplication",
+    })),
+    publisher: {
+      "@type": "Organization",
+      name: "AI Navigator",
+      url: BASE,
+    },
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 pb-24">
       {/* Breadcrumb */}
       <div className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
@@ -91,6 +123,12 @@ export default async function ComparePresetPage({ params }: Props) {
                   variant="primary"
                   className="w-full justify-center"
                   isAffiliate={!!tool.affiliateUrl}
+                  toolSlug={tool.slug}
+                  toolName={tool.name}
+                  comparisonSlug={slug}
+                  pageType="compare"
+                  ctaType="verdict_cta"
+                  ctaPosition="top"
                 />
               </div>
             );
@@ -151,12 +189,24 @@ export default async function ComparePresetPage({ params }: Props) {
                   variant="secondary"
                   className="w-full justify-center"
                   isAffiliate={!!tool.affiliateUrl}
+                  toolSlug={tool.slug}
+                  toolName={tool.name}
+                  comparisonSlug={slug}
+                  pageType="compare"
+                  ctaType="try_free"
+                  ctaPosition="bottom"
                 />
               </div>
             </div>
           ))}
         </div>
       </section>
+
+      {/* ── Sponsored slot ── */}
+      <SponsoredSlot placement="compare" pageType="compare" comparisonSlug={slug} />
+
+      {/* ── Save comparison CTA (P2 placeholder) ── */}
+      <SaveComparisonCTA comparisonSlug={slug} comparisonTitle={comp.title} />
 
       {/* ── Related comparisons ── */}
       {relatedComparisons.length > 0 && (
@@ -179,6 +229,9 @@ export default async function ComparePresetPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      <AffiliateDisclosure variant="page" />
     </div>
+    </>
   );
 }

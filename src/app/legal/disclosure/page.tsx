@@ -9,12 +9,7 @@ export const metadata: Metadata = {
   title: "Legal Disclosure (Specified Commercial Transactions Act)",
   description: "Legal disclosure notice based on Japan's Specified Commercial Transactions Act.",
   alternates: {
-    canonical: `${C.siteUrl}/en/legal`,
-    languages: {
-      en: `${C.siteUrl}/en/legal`,
-      ja: `${C.siteUrl}/ja/legal`,
-      "x-default": `${C.siteUrl}/en/legal`,
-    },
+    canonical: `${C.siteUrl}/legal/disclosure`,
   },
 };
 
@@ -123,11 +118,7 @@ export default function LegalDisclosurePage() {
   ];
 
   return (
-    <LegalPageLayout
-      lang="en"
-      title="Legal Disclosure"
-      lastUpdated={LAST_UPDATED}
-    >
+    <LegalPageLayout title="Legal Disclosure" lastUpdated={LAST_UPDATED}>
       <p>
         This page provides legal disclosures required under Japan's Act on Specified
         Commercial Transactions (特定商取引法). All service transactions are subject to
@@ -157,11 +148,11 @@ export default function LegalDisclosurePage() {
         </li>
         <li>
           By completing a purchase or subscription, you agree to the{" "}
-          <a href="/en/terms" className="underline hover:text-foreground">
+          <a href="/legal/terms" className="underline hover:text-foreground">
             Terms of Service
           </a>{" "}
           and{" "}
-          <a href="/en/privacy" className="underline hover:text-foreground">
+          <a href="/legal/privacy" className="underline hover:text-foreground">
             Privacy Policy
           </a>
           .

@@ -10,6 +10,7 @@ import { RatingWidget } from "@/components/domain/RatingWidget";
 import { ToolCard } from "@/components/domain/ToolCard";
 import { ReviewsSection } from "@/components/domain/ReviewsSection";
 import { ShareBar } from "@/components/domain/ShareBar";
+import { AffiliateDisclosure } from "@/components/domain/AffiliateDisclosure";
 import {
   getToolBySlug,
   getAlternatives,
@@ -63,7 +64,40 @@ export default async function ToolDetailPage({ params }: Props) {
     quality: "output quality",
   };
 
+  const BASE =
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+    "https://ai-navigator.vercel.app";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.shortDescription,
+    url: tool.officialUrl,
+    applicationCategory: "AIApplication",
+    operatingSystem: tool.platforms.join(", "),
+    offers: {
+      "@type": "Offer",
+      price: tool.freePlan ? "0" : (tool.startingPrice ?? ""),
+      priceCurrency: "USD",
+      availability: "https://schema.org/OnlineOnly",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgScore,
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "5",
+    },
+    mainEntityOfPage: `${BASE}/tools/${tool.slug}`,
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 pb-24">
       {/* Header */}
       <div className="mb-8 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
@@ -93,6 +127,12 @@ export default async function ToolDetailPage({ params }: Props) {
             label={tool.freePlan ? "Try for free" : "Visit official site"}
             variant="primary"
             isAffiliate={!!tool.affiliateUrl}
+            isSponsored={tool.sponsored}
+            toolSlug={tool.slug}
+            toolName={tool.name}
+            pageType="tool"
+            ctaType="try_free"
+            ctaPosition="top"
           />
         </div>
       </div>
@@ -212,6 +252,8 @@ export default async function ToolDetailPage({ params }: Props) {
             <h2 className="mb-4 font-semibold">Community Reviews</h2>
             <ReviewsSection slug={tool.slug} toolName={tool.name} />
           </section>
+
+          <AffiliateDisclosure variant="page" />
         </div>
 
         {/* Right sidebar */}
@@ -257,6 +299,12 @@ export default async function ToolDetailPage({ params }: Props) {
               label={tool.freePlan ? "Start for free" : "Visit official site"}
               className="w-full justify-center"
               isAffiliate={!!tool.affiliateUrl}
+              isSponsored={tool.sponsored}
+              toolSlug={tool.slug}
+              toolName={tool.name}
+              pageType="tool"
+              ctaType="try_free"
+              ctaPosition="sidebar"
             />
             {tool.affiliateUrl && (
               <a
@@ -279,5 +327,6 @@ export default async function ToolDetailPage({ params }: Props) {
         </aside>
       </div>
     </div>
+    </>
   );
 }
