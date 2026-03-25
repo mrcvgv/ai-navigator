@@ -7,8 +7,9 @@ import { ComparisonTable } from "@/components/domain/ComparisonTable";
 import { CTAButton } from "@/components/domain/CTAButton";
 import { Badge } from "@/components/ui/badge";
 import { AffiliateDisclosure } from "@/components/domain/AffiliateDisclosure";
-import { SaveComparisonCTA } from "@/components/domain/SaveComparisonCTA";
 import { SponsoredSlot } from "@/components/domain/SponsoredSlot";
+import { ProSaveCTA } from "@/components/domain/ProSaveCTA";
+import { ProCTABanner } from "@/components/domain/ProCTABanner";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -205,8 +206,11 @@ export default async function ComparePresetPage({ params }: Props) {
       {/* ── Sponsored slot ── */}
       <SponsoredSlot placement="compare" pageType="compare" comparisonSlug={slug} />
 
-      {/* ── Save comparison CTA (P2 placeholder) ── */}
-      <SaveComparisonCTA comparisonSlug={slug} comparisonTitle={comp.title} />
+      {/* ── Save comparison + Pro CTA ── */}
+      <div className="my-8 space-y-3">
+        <ProSaveCTA slug={slug} title={comp.title} />
+        <ProCTABanner variant="inline" />
+      </div>
 
       {/* ── Related comparisons ── */}
       {relatedComparisons.length > 0 && (

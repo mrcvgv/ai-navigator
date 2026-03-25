@@ -11,6 +11,7 @@ import { ToolCard } from "@/components/domain/ToolCard";
 import { ReviewsSection } from "@/components/domain/ReviewsSection";
 import { ShareBar } from "@/components/domain/ShareBar";
 import { AffiliateDisclosure } from "@/components/domain/AffiliateDisclosure";
+import { ProCTABanner } from "@/components/domain/ProCTABanner";
 import {
   getToolBySlug,
   getAlternatives,
@@ -320,6 +321,8 @@ export default async function ToolDetailPage({ params }: Props) {
           </div>
 
           <RatingWidget slug={tool.slug} />
+
+          <ProCTABanner variant="sidebar" />
 
           <div className="text-xs text-center text-muted-foreground">
             Last updated {tool.updatedAt}

@@ -15,6 +15,22 @@ export function LegalFooter() {
           </span>
         </p>
 
+        {/* Product links */}
+        <nav
+          aria-label="Product"
+          className="mb-3 flex flex-wrap gap-x-5 gap-y-1.5 text-xs"
+        >
+          <Link href="/pro" className="font-medium text-amber-500 hover:text-amber-400 transition-colors">
+            Pro
+          </Link>
+          <Link href="/advertise" className="text-muted-foreground hover:text-foreground transition-colors">
+            Advertise
+          </Link>
+          <Link href="/saved" className="text-muted-foreground hover:text-foreground transition-colors">
+            Saved
+          </Link>
+        </nav>
+
         {/* Legal links */}
         <nav
           aria-label="Legal"

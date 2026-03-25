@@ -12,6 +12,11 @@ const nav = [
   { label: "Categories", href: "/categories" },
 ];
 
+const rightNav = [
+  { label: "Pro", href: "/pro", amber: true },
+  { label: "Advertise", href: "/advertise" },
+];
+
 export function Header() {
   const pathname = usePathname();
   const { tools } = useCompare();
@@ -24,30 +29,50 @@ export function Header() {
           <span>AI Navigator</span>
         </Link>
 
-        <nav className="flex items-center gap-1">
-          {nav.map(({ label, href, highlight }) => (
-            <Link
-              key={href}
-              href={href}
-              className={cn(
-                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-                pathname.startsWith(href)
-                  ? "bg-primary text-primary-foreground"
-                  : highlight
-                    ? "border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground"
+        <div className="flex items-center gap-1">
+          <nav className="flex items-center gap-1">
+            {nav.map(({ label, href, highlight }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                  pathname.startsWith(href)
+                    ? "bg-primary text-primary-foreground"
+                    : highlight
+                      ? "border border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                )}
+              >
+                {highlight && <GitCompare className="h-3.5 w-3.5" />}
+                {label}
+                {highlight && tools.length > 0 && (
+                  <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary-foreground text-[10px] font-bold text-primary">
+                    {tools.length}
+                  </span>
+                )}
+              </Link>
+            ))}
+          </nav>
+          <div className="ml-2 flex items-center gap-1 border-l border-border pl-2">
+            {rightNav.map(({ label, href, amber }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                  amber
+                    ? pathname === href
+                      ? "bg-amber-500 text-white"
+                      : "border border-amber-400/50 text-amber-500 hover:bg-amber-500 hover:text-white"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-              )}
-            >
-              {highlight && <GitCompare className="h-3.5 w-3.5" />}
-              {label}
-              {highlight && tools.length > 0 && (
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary-foreground text-[10px] font-bold text-primary">
-                  {tools.length}
-                </span>
-              )}
-            </Link>
-          ))}
-        </nav>
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -13,6 +13,10 @@ export default function AdvertisePage() {
   const [loading, setLoading] = useState<SponsoredTier | null>(null);
   const [toolName, setToolName] = useState("");
 
+  // Inquiry form state
+  const [form, setForm] = useState({ name: "", email: "", tool: "", message: "" });
+  const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
   async function handleCheckout(tier: SponsoredTier) {
     setLoading(tier);
     try {
@@ -31,6 +35,21 @@ export default function AdvertisePage() {
     } catch {
       alert("Network error. Please try again.");
       setLoading(null);
+    }
+  }
+
+  async function handleInquiry(e: React.FormEvent) {
+    e.preventDefault();
+    setFormState("sending");
+    try {
+      const res = await fetch("/api/advertise/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      setFormState(res.ok ? "sent" : "error");
+    } catch {
+      setFormState("error");
     }
   }
 
@@ -117,12 +136,84 @@ export default function AdvertisePage() {
           })}
         </div>
 
-        <p className="text-center text-sm text-gray-600 mt-8">
-          Billed monthly. Cancel anytime. Questions?{" "}
-          <a href="mailto:hi@creama.xyz" className="text-indigo-400 hover:underline">
-            hi@creama.xyz
-          </a>
+        <p className="text-center text-sm text-gray-600 mt-6">
+          Billed monthly. Cancel anytime.
         </p>
+      </section>
+
+      {/* Inquiry form */}
+      <section className="px-6 pb-24 max-w-xl mx-auto">
+        <div className="border border-gray-800 rounded-2xl p-8 bg-gray-900/50">
+          <h2 className="text-xl font-semibold mb-2">Not ready to commit?</h2>
+          <p className="text-sm text-gray-400 mb-6">
+            Send us a message and we&apos;ll get back to you within 1 business day.
+          </p>
+
+          {formState === "sent" ? (
+            <div className="py-8 text-center text-green-400">
+              <p className="text-lg font-semibold mb-1">Got it!</p>
+              <p className="text-sm text-gray-400">We&apos;ll reply to you shortly at {form.email}.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleInquiry} className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Name</label>
+                  <input
+                    required
+                    type="text"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    placeholder="Your name"
+                    className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-400 mb-1">Email</label>
+                  <input
+                    required
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder="you@example.com"
+                    className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs text-gray-400 mb-1">Tool name</label>
+                <input
+                  type="text"
+                  value={form.tool}
+                  onChange={(e) => setForm({ ...form, tool: e.target.value })}
+                  placeholder="e.g. Notion AI"
+                  className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-gray-400 mb-1">Message</label>
+                <textarea
+                  required
+                  rows={4}
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  placeholder="Tell us about your tool and what you're looking for..."
+                  className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-indigo-500 resize-none"
+                />
+              </div>
+              {formState === "error" && (
+                <p className="text-xs text-red-400">Something went wrong — please email hi@creama.xyz directly.</p>
+              )}
+              <button
+                type="submit"
+                disabled={formState === "sending"}
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-semibold transition-all disabled:opacity-50"
+              >
+                {formState === "sending" ? "Sending..." : "Send inquiry"}
+              </button>
+            </form>
+          )}
+        </div>
       </section>
     </main>
   );
