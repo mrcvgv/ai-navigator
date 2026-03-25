@@ -425,14 +425,22 @@ async function main() {
     process.exit(1);
   }
 
-  // Pass 1: pricing
-  const deltas = await runPricingPass();
-  const pricingOut = path.join(__dirname, "../src/data/pricing-updates.json");
-  fs.writeFileSync(pricingOut, JSON.stringify(deltas, null, 2));
-  const changed = deltas.filter((d) => d.changes.length > 0);
-  console.log(`\nPricing: ${changed.length} changes applied`);
-  for (const d of changed) {
-    for (const c of d.changes) console.log(`  ${d.name}: ${c.field} ${c.oldValue} → ${c.newValue}`);
+  const skipPricing = process.argv.includes("--skip-pricing");
+
+  // Pass 1: pricing (skipped on non-Monday daily runs to avoid hammering tool sites)
+  let changedCount = 0;
+  if (!skipPricing) {
+    const deltas = await runPricingPass();
+    const pricingOut = path.join(__dirname, "../src/data/pricing-updates.json");
+    fs.writeFileSync(pricingOut, JSON.stringify(deltas, null, 2));
+    const changed = deltas.filter((d) => d.changes.length > 0);
+    changedCount = changed.length;
+    console.log(`\nPricing: ${changed.length} changes applied`);
+    for (const d of changed) {
+      for (const c of d.changes) console.log(`  ${d.name}: ${c.field} ${c.oldValue} → ${c.newValue}`);
+    }
+  } else {
+    console.log(`\n=== Pass 1: Pricing skipped (--skip-pricing) ===`);
   }
 
   // Pass 2a: discover candidates
@@ -442,7 +450,7 @@ async function main() {
   // Pass 2b: auto-add
   const added = await runAutoAddPass(candidates, existingSlugs);
 
-  console.log(`\n✓ Done. Pricing changes: ${changed.length}. New tools added: ${added}.`);
+  console.log(`\n✓ Done. Pricing changes: ${changedCount}. New tools added: ${added}.`);
 }
 
 main().catch(console.error);
