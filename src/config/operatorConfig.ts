@@ -147,19 +147,19 @@ export interface OperatorConfig {
 // ============================================================
 export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   // ── Legal Identity ────────────────────────────────────────
-  operatorLegalName: "TODO: [Your Legal Full Name]",         // 本名（個人事業主の場合）
-  operatorTradeName: "Cream",                                 // ブランド名
+  operatorLegalName: "佐藤康平",
+  operatorTradeName: "Cream",
 
   // ── Address & Contact ─────────────────────────────────────
-  address: "",
-  phone: null,
-  disclosePhoneOnRequest: true,
-  contactEmail: "TODO: contact@example.com",
+  address: "〒160-0023 東京都新宿区西新宿三丁目3番13号 西新宿水間ビル6階",
+  phone: "080-3586-8876",
+  disclosePhoneOnRequest: false,
+  contactEmail: "hi@creama.xyz",
 
   // ── Site Identity ─────────────────────────────────────────
   siteName: "AI Navigator",
   siteDescription: "Compare AI tools side-by-side. Find the right tool with confidence.",
-  siteUrl: "https://ai-navigator.example.com",   // TODO: real URL
+  siteUrl: "https://ai-navigator.vercel.app",
   defaultLocale: "en",
   supportedLocales: ["en"],
 
@@ -204,8 +204,17 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
     "重大な誤りや不具合を発見された場合は、ご連絡いただければ速やかに修正します。",
 
   // ── Subscription ─────────────────────────────────────────
-  subscriptionPolicy: null,  // Set when subscription plans are launched
-  subscriptionPolicyJa: null,
+  subscriptionPolicy: {
+    billingCycle: "Monthly or Annually",
+    renewalCondition: "Subscriptions auto-renew at the end of each billing period unless cancelled before the renewal date.",
+    cancellationPolicy: "Cancel anytime from account settings. Access continues until the end of the current billing period.",
+    trialPeriod: undefined,
+  },
+  subscriptionPolicyJa: {
+    billingCycle: "月払いまたは年払い",
+    renewalCondition: "更新日前にキャンセルしない限り、各請求期間の終了時に自動更新されます。",
+    cancellationPolicy: "アカウント設定からいつでもキャンセル可能です。現在の請求期間終了まではご利用いただけます。",
+  },
 
   // ── No physical goods ────────────────────────────────────
   shippingPolicy: null,
@@ -233,7 +242,7 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   courtJa: "東京地方裁判所",
 
   // ── IP & Copyright ───────────────────────────────────────
-  copyrightOwner: "Cream (TODO: [Legal Name])",
+  copyrightOwner: "Cream / Fuller Design / Peakful",
   trademarkNotice: null,
 
   // ── Support ──────────────────────────────────────────────
@@ -241,7 +250,7 @@ export const AI_NAVIGATOR_CONFIG: OperatorConfig = {
   supportResponseWindowJa: "3営業日以内",
 
   // ── Privacy ──────────────────────────────────────────────
-  privacyContactEmail: "TODO: privacy@example.com",
+  privacyContactEmail: "hi@creama.xyz",
   analyticsServices: ["Vercel Analytics"],
   paymentProcessors: ["Stripe"],
   authProviders: [],
