@@ -1,15 +1,730 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-03-25T02:55:13.888Z",
   "summary": {
-    "totalTools": 0,
-    "activeTools": 0,
+    "totalTools": 119,
+    "activeTools": 119,
     "deadTools": 0,
     "autoAddedTools": 0,
-    "totalComparisons": 0,
-    "thinContentTools": 0,
+    "totalComparisons": 20,
+    "thinContentTools": 75,
     "critical": 0,
     "warnings": 0,
-    "infos": 0
+    "infos": 119
   },
-  "issues": []
+  "issues": [
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "chatgpt",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "claude",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "gemini",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "perplexity",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "midjourney",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "ideogram",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "flux",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "runway",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "pika",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "elevenlabs",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "suno",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "notion-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "cursor",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "replit",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "descript",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "grok",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "microsoft-copilot",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "deepseek",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "mistral",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "poe",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "character-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "meta-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "you",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "github-copilot",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "windsurf",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "bolt",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "v0",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "lovable",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "tabnine",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "aider",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "stable-diffusion",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "dall-e-3",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "adobe-firefly",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "leonardo-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "kling",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "canva-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "recraft",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "sora",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "heygen",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "synthesia",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "luma-dream",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "invideo-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "whisper",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "otter-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "fireflies",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "murf",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "udio",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "adobe-podcast",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "zapier-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "make",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "taskade",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "coda-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "reclaim-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "motion-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "consensus",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "elicit",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "scite",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "gamma",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "beautiful-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "tome",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "figma-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "framer-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "uizard",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "locofy",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "jasper",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "copy-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "writesonic",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "grammarly-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "sudowrite",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "adcreative-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "hootsuite-owly",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "buffer-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "julius-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "obviously-ai",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "thin_content",
+      "slug": "akkio",
+      "detail": "fullDescription identical to shortDescription (needs enrichment)"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "llama",
+      "detail": "Not updated in 358 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "cohere-command",
+      "detail": "Not updated in 389 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "qwen",
+      "detail": "Not updated in 389 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "phi-3",
+      "detail": "Not updated in 417 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "devin",
+      "detail": "Not updated in 389 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "codeium",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "continue-dev",
+      "detail": "Not updated in 417 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "zed-ai",
+      "detail": "Not updated in 417 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "claude-code",
+      "detail": "Not updated in 358 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "krea-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "playground-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "firefly-vector",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "bing-image-creator",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "capcut-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "opus-clip",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "fliki",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "podcastle",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "cleanvoice",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "replica-studios",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "rytr",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "quillbot",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "wordtune",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "novelai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "pitch",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "slidesai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "presentations-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "magicslides",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "predis-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "pencil-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "instantly-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "vidyo-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "polymer",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "rows-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "formula-bot",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "coefficient",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "scispace",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "research-rabbit",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "connected-papers",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "visily",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "relume",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "galileo-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "mem-ai",
+      "detail": "Not updated in 448 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "granola",
+      "detail": "Not updated in 417 days"
+    },
+    {
+      "severity": "info",
+      "type": "stale_tool",
+      "slug": "superhuman",
+      "detail": "Not updated in 448 days"
+    }
+  ]
 }
