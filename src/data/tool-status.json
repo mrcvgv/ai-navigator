@@ -1,473 +1,398 @@
-[
-  {
-    "slug": "chatgpt",
+{
+  "chatgpt": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "claude",
+  "claude": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "gemini",
+  "gemini": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "perplexity",
+  "perplexity": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "midjourney",
+  "midjourney": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "ideogram",
+  "ideogram": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "flux",
+  "flux": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "runway",
+  "runway": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "pika",
+  "pika": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "elevenlabs",
+  "elevenlabs": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "suno",
+  "suno": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "notion-ai",
+  "notion-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "cursor",
+  "cursor": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "replit",
+  "replit": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "descript",
+  "descript": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "grok",
+  "grok": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "microsoft-copilot",
+  "microsoft-copilot": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "deepseek",
+  "deepseek": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "mistral",
+  "mistral": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "poe",
+  "poe": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "character-ai",
+  "character-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "meta-ai",
+  "meta-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "you",
+  "you": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "github-copilot",
+  "github-copilot": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "windsurf",
+  "windsurf": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "bolt",
+  "bolt": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "v0",
+  "v0": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "lovable",
+  "lovable": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "tabnine",
+  "tabnine": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "aider",
+  "aider": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "stable-diffusion",
+  "stable-diffusion": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "dall-e-3",
+  "dall-e-3": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "adobe-firefly",
+  "adobe-firefly": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "leonardo-ai",
+  "leonardo-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "kling",
+  "kling": {
     "lastChecked": "2026-03-23",
     "httpStatus": 405,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "canva-ai",
+  "canva-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "recraft",
+  "recraft": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "sora",
+  "sora": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "heygen",
+  "heygen": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "synthesia",
+  "synthesia": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "luma-dream",
+  "luma-dream": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "invideo-ai",
+  "invideo-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "whisper",
+  "whisper": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "otter-ai",
+  "otter-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "fireflies",
+  "fireflies": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "murf",
+  "murf": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "udio",
+  "udio": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "adobe-podcast",
+  "adobe-podcast": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "zapier-ai",
+  "zapier-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "make",
+  "make": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "taskade",
+  "taskade": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "coda-ai",
+  "coda-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "reclaim-ai",
+  "reclaim-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "motion-ai",
+  "motion-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "consensus",
+  "consensus": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "elicit",
+  "elicit": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "scite",
+  "scite": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "gamma",
+  "gamma": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "beautiful-ai",
+  "beautiful-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "tome",
+  "tome": {
     "lastChecked": "2026-03-23",
     "httpStatus": 404,
     "ok": false
   },
-  {
-    "slug": "figma-ai",
+  "figma-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "framer-ai",
+  "framer-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "uizard",
+  "uizard": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "locofy",
+  "locofy": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "jasper",
+  "jasper": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "copy-ai",
+  "copy-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "writesonic",
+  "writesonic": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "grammarly-ai",
+  "grammarly-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 405,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "sudowrite",
+  "sudowrite": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "adcreative-ai",
+  "adcreative-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "hootsuite-owly",
+  "hootsuite-owly": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "buffer-ai",
+  "buffer-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "julius-ai",
+  "julius-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 403,
     "ok": true,
     "note": "bot-blocked"
   },
-  {
-    "slug": "obviously-ai",
+  "obviously-ai": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   },
-  {
-    "slug": "akkio",
+  "akkio": {
     "lastChecked": "2026-03-23",
     "httpStatus": 200,
     "ok": true
   }
-]
+}
