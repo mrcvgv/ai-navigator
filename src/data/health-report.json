@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T00:00:14.342Z",
+  "generatedAt": "2026-03-27T17:00:15.894Z",
   "summary": {
     "totalTools": 119,
     "activeTools": 119,
@@ -466,265 +466,265 @@
       "severity": "info",
       "type": "stale_tool",
       "slug": "llama",
-      "detail": "Not updated in 359 days"
+      "detail": "Not updated in 360 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "cohere-command",
-      "detail": "Not updated in 390 days"
+      "detail": "Not updated in 391 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "qwen",
-      "detail": "Not updated in 390 days"
+      "detail": "Not updated in 391 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "phi-3",
-      "detail": "Not updated in 418 days"
+      "detail": "Not updated in 419 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "devin",
-      "detail": "Not updated in 390 days"
+      "detail": "Not updated in 391 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "codeium",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "continue-dev",
-      "detail": "Not updated in 418 days"
+      "detail": "Not updated in 419 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "zed-ai",
-      "detail": "Not updated in 418 days"
+      "detail": "Not updated in 419 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "claude-code",
-      "detail": "Not updated in 359 days"
+      "detail": "Not updated in 360 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "krea-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "playground-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "firefly-vector",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "bing-image-creator",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "capcut-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "opus-clip",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "fliki",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "podcastle",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "cleanvoice",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "replica-studios",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "rytr",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "quillbot",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "wordtune",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "novelai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "pitch",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "slidesai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "presentations-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "magicslides",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "predis-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "pencil-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "instantly-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "vidyo-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "polymer",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "rows-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "formula-bot",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "coefficient",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "scispace",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "research-rabbit",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "connected-papers",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "visily",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "relume",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "galileo-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "mem-ai",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "granola",
-      "detail": "Not updated in 418 days"
+      "detail": "Not updated in 419 days"
     },
     {
       "severity": "info",
       "type": "stale_tool",
       "slug": "superhuman",
-      "detail": "Not updated in 449 days"
+      "detail": "Not updated in 450 days"
     }
   ]
 }

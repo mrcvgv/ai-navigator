@@ -1,714 +1,714 @@
 {
   "chatgpt": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "claude": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "gemini": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "perplexity": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "midjourney": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "ideogram": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "flux": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "runway": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "pika": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "elevenlabs": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "suno": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "notion-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "cursor": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "replit": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "descript": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "grok": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "microsoft-copilot": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "deepseek": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "mistral": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "poe": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "character-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "meta-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "you": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "github-copilot": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "windsurf": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "bolt": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "v0": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "lovable": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "tabnine": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "aider": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "stable-diffusion": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "dall-e-3": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "adobe-firefly": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "leonardo-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "kling": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "canva-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "recraft": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "sora": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "heygen": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "synthesia": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "luma-dream": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "invideo-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "whisper": {
-    "lastChecked": "2026-03-26",
-    "httpStatus": 200,
+    "lastChecked": "2026-03-27",
+    "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "otter-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "fireflies": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "murf": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "udio": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "adobe-podcast": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "zapier-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "make": {
-    "lastChecked": "2026-03-26",
-    "httpStatus": 200,
+    "lastChecked": "2026-03-27",
+    "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "taskade": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "coda-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "reclaim-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "motion-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "consensus": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "elicit": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "scite": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "gamma": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "beautiful-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "tome": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 404,
     "ok": false,
-    "consecutiveFailures": 1
+    "consecutiveFailures": 3
   },
   "figma-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "framer-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "uizard": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "locofy": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "jasper": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "copy-ai": {
-    "lastChecked": "2026-03-26",
-    "httpStatus": 0,
-    "ok": false,
-    "consecutiveFailures": 1
+    "lastChecked": "2026-03-27",
+    "httpStatus": 200,
+    "ok": true,
+    "consecutiveFailures": 0
   },
   "writesonic": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "grammarly-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 405,
     "ok": true,
     "consecutiveFailures": 0
   },
   "sudowrite": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "adcreative-ai": {
-    "lastChecked": "2026-03-26",
-    "httpStatus": 200,
-    "ok": true,
-    "consecutiveFailures": 0
+    "lastChecked": "2026-03-27",
+    "httpStatus": 0,
+    "ok": false,
+    "consecutiveFailures": 1
   },
   "hootsuite-owly": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "buffer-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "julius-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "obviously-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "akkio": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "llama": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "cohere-command": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "qwen": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "phi-3": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "devin": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "codeium": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "continue-dev": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "zed-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "claude-code": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "krea-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "playground-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "firefly-vector": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "bing-image-creator": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "capcut-ai": {
-    "lastChecked": "2026-03-26",
-    "httpStatus": 200,
-    "ok": true,
-    "consecutiveFailures": 0
+    "lastChecked": "2026-03-27",
+    "httpStatus": 0,
+    "ok": false,
+    "consecutiveFailures": 1
   },
   "opus-clip": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "fliki": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "podcastle": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "cleanvoice": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "replica-studios": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "rytr": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "quillbot": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "wordtune": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "novelai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "pitch": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "slidesai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "presentations-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "magicslides": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "predis-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "pencil-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "instantly-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "vidyo-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "polymer": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "rows-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "formula-bot": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "coefficient": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "scispace": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 403,
     "ok": true,
     "consecutiveFailures": 0
   },
   "research-rabbit": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "connected-papers": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "visily": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "relume": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "galileo-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "mem-ai": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "granola": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
   },
   "superhuman": {
-    "lastChecked": "2026-03-26",
+    "lastChecked": "2026-03-27",
     "httpStatus": 200,
     "ok": true,
     "consecutiveFailures": 0
